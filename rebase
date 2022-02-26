@@ -1,0 +1,34 @@
+Git Merge vs Git Rebase
+==============================
+In Git there are 2 ways to integrate changes from one branch to another 
+=>git merge
+=>git rebase
+
+git merge
+-------------
+is a non-destructive operation
+existing branches are not changed in any way
+creates a new merge commit in the feature branch
+
+git rebase
+==========
+moves the entire feature branch to begin on the tip of the master branch
+re-write the project history
+we get much cleaner and liner project history
+
+================
+what is Git stash and when should developer use git stash
+------------------
+Gut has an area called the stash where you can temporarily store a snapshot of your 
+changes without committing them to the repository.its separate from the working dir
+the staging area or the repository
+-----
+This functionality is useful when you have made chnages to a branch that you are not ready to commit
+but you need to switch to another branch
+
+=>modified a file
+=>git stash =>it will go to the temp location
+=>git status
+=>git stash pop=>again come back from temp to workstation
+
+
