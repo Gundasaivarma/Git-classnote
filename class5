@@ -1,0 +1,170 @@
+branch
+merge
+rebase
+==================
+Branch
+-------------------
+=>devloper are create verious functionality for that we need to create branch
+master
+feature branch
+-------
+step to create a branch
+===========================
+git branch
+git branch branchname
+git branch
+git checkout branchname
+git checkout -b branchname
+
+-------------
+delete 
+============
+git branch -d branch (u should come out from the branch and delete)
+=============================
+merge
+==============================
+
+step1:create branch and add some new thing
+step2:come to master and try to merge
+        --1st need to identfiy where need to merge
+		--see which one source and which one destination
+		--go to destination and do merge
+-----------------------
+=>master
+=>create branch called child 
+=>add some file in child 
+=>go to master 
+=>git merge source destination
+=>git merge child master
+=====================
+merge conflit
+========================
+=>In master added some new file called jenkins
+=>go to child branch and add samefile jenkins
+=>come to master try to merge 
+=>conflit will happened
+=>manulay need to open the file and slove the issue 
+=>add and commit the file 
+=>check the commit id 
+==========================
+rebase
+=========================
+when we are doing merging 
+master=>A=B
+child=>A=B
+---------
+STEP2:
+------
+master=>A=B=C=D(in master branch u made some commit)
+child=>A=B
+STEP3:switch to child branch and add some commit
+-----
+master=>A=B=C=D
+child=>A=B=E=F(in child branch u made some commit)
+
+STEP4:SOURCE IS MASTER AND DESTINATION IS CHILD
+     --merge from master to child 
+	    A=B=E=F=C=D
+		it is working nonlinier work flow
+NOTE:git always work on nonlinier workflow 		
+STEP5:
+-----
+REBASE:
+---------
+A=B=C=D=E=F
+1st it will creat a batch of your source branch then u intigrate your new commit of your destination branch
+git will compress the history of source branch into single patch 
+
+NOTE:rebase always happened in child branch it will never happened in master branch 
+=>source is master
+=>destination is child ---every time it will happened in child or feature branch 
+
+git rebase master=>source branch  
+
+======================== 
+tag
+=========================
+=>for relase spacific version we can tag it so that when we required we will get all info about that
+=>a sorten point in you commit you mark it as rease or version
+=>git tag --a v1.2 commit id -m "new version"
+=>git tag
+=>git show v1.2
+
+==========================
+stash => somthing you are saving for later use
+      =>store safely in a hidden or secret place 
+      =>git store your uncommited changes 
+========================
+=>modified some file 
+=>git stash
+=>all changes will stash
+=>git stash list
+=>git show stash@{0}
+for single file 
+=>git stash 
+=>git stash pop stash@{0} =>remove the changes temp  to the working dir 
+=>git stash apply =>we can apply the changes in other branch also(it should present both temp and working)
+=>git stash drop  =>single file remove
+=>git stash clear =>whole stash remove
+----
+git stash save "add style to our site"
+
+====================
+git fetch 
+==================
+
+
+pull conflit
+=====================
+add some file in git hub
+add some file in local repo
+do git pull
+
+==================
+git cherry-pick
+===============
+=>when user want to do a spacific commit then we can use cherry-pick
+=>when u are doing merge that time all your commit is mergeing 
+=>for single commit we can use cherry-pick
+git cherry-pick commit id 
+=>add some commit  in child branch
+=>go to master and do git cherry-pick commit id 
+ 
+
+====================
+git fork
+git clone
+=====================
+copy one github account repo to another git hub account 
+copy the repo to your account 
+click fork in right side of the github
+
+
+cloneing will copy your repo to local repo /local machine
+fork will copy one git hub account to another github account
+=======================
+pull request
+======================
+one github account to another github account /one branch to another ==>(one account)
+----------------------------------------------
+=>in dev2 azuredevops2021 =>create a file in github repo 
+=>it is not avliable in dev1 mechine ashisnishanka=>github repo 
+=>how can we push the file one github repo to another github repo 
+=>what all new file added in dev2 he will create the pull request
+=>hey dev1 i have some new contribunation of your code ,i want you 1st review them then merge them to your code=>click on pull request(dev2)
+=>click on pullrequest=>create pullrequest=>it will show both github repo 
+=>create the pullrequest=>give some comment to review your code 
+=>come dev1 repo and click on pullrequest
+=>click on create paymentgetway
+=>give comment and merge/close the pull request
+=>
+
+=====================================================
+
+
+
+
+
+
+
+

@@ -1,0 +1,198 @@
+what is git stash
+  --git stash 
+what is the different between .gitignore and git stash
+
+---
+    --gitignore=>in workstation
+    --stash =>if w =>local
+                 modified =>stash 
+    -
+=>what git checkout 
+     in git how many checkout are there 
+   -->
+=>what is git reset
+    how many type of reset is there in git
+    --hard
+    --soft
+    --mixed
+      -->commit id it will remove
+=>what is git revert
+      ->commit id and it will create new commit id 
+=>what is the different between merge and rebase
+  ->
+=>what is different pull and fetch
+    ->
+=>what is different between git clone and git init
+  --
+=> workstation =>git init
+    A.txt => git hub repo
+    ->git init
+    ->git status
+    ->git add -A
+    =>git commit -m "message"
+    =>git remote add origin url
+    =>git remote -v
+    =>git push origin master
+        --username 
+        --token
+================================
+ workstation =>git clone url
+    A.txt => git hub repo
+     -->git clone url
+     --> git add -A
+     -->git commit -m ""
+     -->git push origin1 master
+        --username 
+        --token
+origin ->url
+url=>repo -->remote
+   ->local repo
+=====================
+what is git pull request
+   --
+what is git chreepick
+    --
+what is forks
+      ->repo to other repo
+   ==========
+git log --oneline
+ ->git show commit id 
+=>how to do global confi in git and what is the use
+  =>what is git tag
+     --
+
+============================
+what is pipeline in jenkins
+ types of pipeline
+   --build pipeline=>upstream/downstream
+   --groovy scrited pipeline
+            --scripted
+            --declative
+     
+   scripted
+   ========
+ node
+{
+  stage('build')
+{
+  sh 'mvn compile'
+}
+stage('test')
+{
+  sh 'mvn test'
+}
+}
+
+=================
+
+--declative
+=================
+pipeline
+{
+  agent any
+  stages
+{
+  stage('build')
+   {
+    steps
+{
+bat 'mvn compile'
+
+}
+
+}
+
+
+}
+
+
+}
+================
+compile
+codereview
+testing
+codecovrage
+package
+==================
+
+pipeline{
+ tools{
+        jdk 'JAVA_HOME'
+        maven 'M2_HOME'
+    }
+     agent any
+	  
+	  stages{
+	  
+	  stage("checkout"){
+	   steps{
+	   git 'https://github.com/ashisnishanka/gitrealtime.git'
+	   }
+	                  }
+	
+	   stage("compile"){
+	    steps{
+		 sh 'mvn compile'
+		}
+		}
+	  }
+	}
+
+===============
+how to create user
+file -->root --->user1
+
+          unix/linux
+--->passwd 
+  =>ls -l
+  rwxrwxrwx root root file
+rwxrwxrwx user1 user1 file
+ ===================================================================\
+Explain Unix Architecture ?
+
+Can you write a command to erase all files in the current directory including all its sub-directories?
+
+Describe a link in UNIX.
+
+What do chmod, chown, chgrp commands do
+
+Can you name the important standard streams in the UNIX shell scripting?
+--Standard Input, Standard Output as well as Standard Error ?
+
+Can you explain the method of changing file access permission?
+
+What can you tell about shell variables?
+NAME="Sumit Roy"
+$ echo $NAME
+$ unset NAME
+
+What is a directory?
+
+What is inode?
+
+======================
+What is Git and why is it used?
+What is a version control system (VCS)?
+What is a git repository?
+What does git clone do?
+What does the command git config do?
+Can you explain head in terms of git 
+What is a conflict?
+Define “Index”
+Why is it considered to be easy to work on Git?
+How will you create a git repository?
+Tell me something about git stash?
+What is the command used to delete a branch?
+What differentiates between the commands git remote and git clone?
+What does git stash apply command do?
+ Differentiate between git pull and git fetch.
+Can you give differences between “pull request” and “branch”?
+ pull request	branch
+This process is done when there is a need to put a developer’s change into another person’s code branch. 	A branch is nothing but a separate version of the code.
+
+Can you tell the difference between Git and GitHub?
+What do the git diff and git status commands do?
+What is the difference between git stash apply vs git stash pop command?
+How will you resolve conflict in Git?
+What is the functionality of “git cherry-pick” command?
+Can you tell the differences between git revert and git reset?

@@ -1,0 +1,80 @@
+modified files
+================
+=>when one file persent in local repo and try to modified some contains
+=>you can move the chnages dir to the repo
+    --git commit -a -m "modified"
+=======
+how the chnages move to staging area to unstagging area 
+---------------
+git diff
+
+unstagged changes if u want to remove 
+--------------------------------
+git checkout -- filename
+
+show me the changes in the stagging area
+----------------------
+git diff --staged filename
+
+----------------
+unstaged back to the untrackarea
+----------------------------
+git reset HEAD filename
+or
+
+git restore --staged filename
+git status
+
+nolonger need this chnages
+---------------------------
+git checkout --filename
+or
+git restore filename
+
+
+
+
+
+========
+check all the commands:
+=========
+history
+
+
+
+
+
+
+
+advance command:
+=================================
+Your Identity
+==================
+The first thing you should do when you install Git is to set your user name and email address. 
+This is important because every Git commit uses this information
+
+git config --global user.name "ashisnishanka"
+git config --global user.email ak.nishanka@gmail.com
+------
+Editor
+--------------
+git config --global core.editor emacs
+git config --global core.editor "vim"
+-------------------
+
+
+git config --global --edit ->chnage the global settings 
+git commit --amend --reset-author ->update the chnages 
+git config --list  ->list of config settings(showing system, global, and (if inside a repository) local configs.)
+git config --list --show-origin , also shows the origin file of each config item
+git config user.name
+git config email.name
+
+
+Your default branch name
+----------------------------
+By default Git will create a branch called master when you create a new repository with git init. 
+From Git version 2.28 onwards, you can set a different name for the initial branch
+
+git config --global init.defaultBranch main
+

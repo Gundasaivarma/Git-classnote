@@ -1,0 +1,135 @@
+if user want to discard the chnages in workstation 
+which is not added in local repo
+======================================================
+checkout
+===================
+git checkout --file1
+====================================================
+let devloper added some data in master and he create branch called QARELASE
+from master,then they work on QARELASE and added some data and did testing now then need
+to move chnages to master
+==============================
+MARGE
+-----------------
+git merge source destination
+user should in destination when doing merge
+=>git merge QARELASE master
+
+confit senario
+-----------------
+create file in master called file4 and something and then add ,commit
+come to QARELASE then add same file and add,commit
+-----
+=>git merge QARELASE master
+   --it will give confilt
+   --all chnages should present in master like A AND B commit
+   --source branch is missing some commit which are there in destinaton
+   --master has A commit and qarelase has A commit and if user will add some thing in qarelase 
+     then if u marge u will not get ant conflit
+   --open the file in editer,correct the content and save the file 
+   --add and commit
+   --merge now it will say alardy up to date
+   --what would be contant of QARELASE ..it should only his data
+=========================================================
+when dev is working on somefile your manager told let work on other file and please keep this file we will relase next or 
+we will use in next project-->we need to put in hold 
+========================================================
+STASH
+===================
+modified some file 
+=>git stash
+=>those chnage are move to temp shell
+=>git stash list
+=>git show stash no
+=>git stash pop stash no--it will unstash->this will get the changes from temp dir and also remove in temp
+=>git stash apply stash@{0} --it will also unstash->but it will not delete from temp shell
+=>git stash -p  -->one partical file going stash
+=>git stash drop stash@{0}-->only paticular stash it will delete
+=>git stash clear -->all stash will clear
+=>they are common to local repo it is not specific to branch
+====================================
+it will give clear history
+======================
+REBASE
+====================================
+master-->A--B
+b1-->A--B
+-------------------------
+master--->A--B--->C
+b1-->A--B--->D
+----------------------------
+dev want C commit in B1 branch 
+---------------------------------
+git merge master b1
+ master->A--B--D--C
+ new commit id added in destination branch
+ ---------------------------------
+but dev need A--B--C--D -->linearly dev
+log histry will rewriten 1st it will show prent and child
+----------------------------------------
+come to b1-->
+  git rebase master
+  git log --oneline b1
+  commit id will chnage but the order and message is same 
+------------------------------------------------
+=================================
+REMOTE REPO-->GIT HUB
+===============================
+PUSH
+----------------
+create a new repo and copy the repo URl
+------
+=>git remote add origin url
+=>git push origin master
+  --username and password
+  --check the in github repo
+=>git remote -v ->origin is set in local repo
+=>git push origin branchname
+===========================
+DELETE BRANCH
+=========================
+git branch -D  b1-->local repo
+git push origin --delete b1
+   --username and password
+=======================
+PULL->update(fetch+merge)
+================
+chnages something in remote repo and try to pull
+=>git pull origin master
+
+============
+FETCH
+==============
+=>git fetch origin
+
+===================
+CLONE:
+=================
+git clone url
+-----------------------
+========================================
+conflit in remote
+=========================
+--create a file in local repo 
+--add and commit
+go to remote repo and add same file 
+  --add and commit
+git push origin master
+  --username and password
+--it will give errror
+--git pull origin
+    --it will show confit
+	--open the file from editer
+	--chnage the file and correct it
+	--git add and commit
+--now push the chnage
+--git push origin master -->now push will be success
+
+
+
+
+
+
+
+
+

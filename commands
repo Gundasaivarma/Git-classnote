@@ -1,0 +1,39 @@
+yum install git -y
+git --version
+	create a directory ** mkdir mydir ** (mkdir dirname)
+	create a file ***touch file1 file2 file3*** (touch , cat > vi , filename)
+git init
+git status
+git add the files (add .  add * add filename)
+git status
+git commit -m "give the message"
+git status
+git add remote origin url (url from the git hub)
+git remote -v (to check weather it is added or not)
+git add origin master 
+git branch (we can create a branch)
+git branch branch name (add b.name)
+git checkout b.name
+git switch
+git tag
+git merge S->D
+git diff file 
+git ls-files
+git revert
+git rebase
+git reset
+git stash
+.git ignore
+git clone
+git log
+git log--oneline
+git pull
+git pull request
+git fitch
+git mv
+git rm
+git restore
+git fork
+git show commit id
+git stash
+git config git help

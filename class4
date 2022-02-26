@@ -1,0 +1,65 @@
+git diff filename =>show the diff in untrack area
+git checkout -- filename => all chnages are gone from your unstage area 
+git diff --staged test2 => show the diff in track area
+
+git reset HEAD test2 => all chnages gone and it move to unstage area 
+git restore test2 =>all chnages are gone from your unstage area 
+
+remove:
+===============
+git rm --cached filename => remove the file from local repo but still the file is present in workstation
+git rm filename => remove both local and workstation
+
+=============
+.gitignore
+======================
+it will work on workstation/unstaging area
+------
+names of files
+
+vim .gitignore
+
+====================
+git log
+====================
+=>git log 
+
+=>git log --oneline
+=>git show commit id
+=>
+
+===============
+REVERT:IT WILL REVERT THE CHNAGES
+================
+from your local repo u deleted the chnages 
+=>git revert commit id
+it will generate a new commit id 
+can we revert a revert ,it also workstation
+==================
+RESET :IT WILL REMOVE THE LOG HISTORY
+============
+=>git reset --hard commit id
+or
+=>git reset --hard HEAD~5 
+hard =>chnages or file remove from working dir,stagging area and local repo
+soft =>changes are remove from local repo and present in both workstation and staged 
+mixed =>chnages remove from local rwepo and staged area but present in working area/dir 
+
+==================
+BRANCH
+============
+git branch
+git branch devops
+git log --oneline
+git checkout devops
+-----------
+git checkout -b branchname ->it will create and switch to the new branch
+
+
+
+
+
+
+
+
+

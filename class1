@@ -1,0 +1,98 @@
+linux system
+=>yum install git -y
+=>mkdir git-repo
+=>cd git-repo
+==========================
+go inside for dir called git-repo
+   =>git init -->git insiliztion /it wil start
+   =>create for file and dir 
+   =>git status
+   =>git add
+   =>git commit -m "added the file"
+===============
+=>where .git is there we can say as local repo 
+=>when user doing 1st commit then we have to configure the system so that
+  when user doing commit who is doing  what it will show
+  =>git config --global user.name "FIRST_NAME LAST_NAME"
+  =>git config --global user.email "MY_NAME@gmail.com"
+========================
+the file stagges
+====================
+workstation----->stagging------->local repo------>remote repo
+stagging area -->it is logical or vartual area
+======================
+modified file
+=======================
+git commit -a -m "added the file" -->in one line we can add and cmmit
+or 
+git add 
+git commit -m "added the file "
+===================
+how to check workstation file and local repo file
+==================================
+workstation -->ls
+local repo -->git ls-files
+===========================
+multiple file adding and commiting
+=====================================
+git add -A
+or 
+git add .
+or 
+git add *
+git commit -m "added"
+====================================
+modfication thing need to roll back/see the chnages the working dir 
+==================================
+git diff filename --woking dir chnages /unstagges chnages
+git diff --staged filename -stagged chnages
+
+note:sometime file modified showing in both the area working dir and staging area
+==========================
+delete file
+=========================
+git rm filename (it will delete both working dir and staging area)
+git commit -m "message"
+
+git rm --cached filename  -- it will delete from local repo
+git commit -m "message"
+======================
+how can tell git not to track the files
+=====================================
+vi .gitignore
+put the filename inside of file .gitignore which all need to ignore
+git add .gitignore
+git commit -m "message"
+========================
+how to check what all user worked and which file user worked and there info(log)
+=============================================
+git log
+git log --oneline
+git commit id show
+==========================
+if user want to undo or user want to roll back(revert)
+=============================================
+git revert commit id 
+==>when user reverting it will always generated a commit id and it will ask for new message
+==>when we are reverting that particular file will deleted 
+==>after commiting we are doing revert command
+==========================================
+when user want to delete the commit history and log history(reset)
+==============================================
+
+=>reset will not generate the commit id 
+ --git reset --hard HEAD~4 -->chages gone for ever
+=>we are able to do local repo and we should not do reset in remote repo things
+
+hard reset
+working-------->staging------->local --->it will delete from all 3 stages and commit also
+
+soft reset:
+working-------->staging------->local --->it will delete from local repo and file is present in working and staging area
+
+mixed reset:
+working-------->staging------->local --->it will delete from local and staging ,but present in working dir 
+==============================================================================================
+BRANCH:
+======================
+
